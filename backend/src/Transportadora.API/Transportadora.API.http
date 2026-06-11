@@ -1,0 +1,6 @@
+@Transportadora.API_HostAddress = http://localhost:5147
+
+GET {{Transportadora.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
