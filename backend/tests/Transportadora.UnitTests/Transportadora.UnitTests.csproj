@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Transportadora.Controllers\Transportadora.Controllers.csproj" />
+    <ProjectReference Include="..\..\src\Transportadora.Services\Transportadora.Services.csproj" />
+    <ProjectReference Include="..\..\src\Transportadora.Models\Transportadora.Models.csproj" />
+    <ProjectReference Include="..\..\src\Transportadora.Data\Transportadora.Data.csproj" />
+    <ProjectReference Include="..\..\src\Transportadora.DTOs\Transportadora.DTOs.csproj" />
+  </ItemGroup>
+</Project>

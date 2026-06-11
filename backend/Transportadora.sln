@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{223A22BE-153B-4597-9D01-FE4218F48D96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F3041206-68BB-43B4-A483-716EE4618428}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transportadora.Controllers", "backend\src\Transportadora.Controllers\Transportadora.Controllers.csproj", "{14E9016D-1FB1-4FD8-8871-8A134CBADD44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transportadora.Services", "backend\src\Transportadora.Services\Transportadora.Services.csproj", "{8822C567-5983-4D72-ABC1-514173F30A32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transportadora.Models", "backend\src\Transportadora.Models\Transportadora.Models.csproj", "{5C78C60E-9294-409B-95AA-3D934392B4D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transportadora.Data", "backend\src\Transportadora.Data\Transportadora.Data.csproj", "{FFC2C68D-7DF7-41BF-884A-7F4F1BA746A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transportadora.DTOs", "backend\src\Transportadora.DTOs\Transportadora.DTOs.csproj", "{8EEDE8D4-C65B-4E1E-BC83-4C4758E43653}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6A4075F6-C6FF-4A1D-B422-A9EDB37F9285}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transportadora.UnitTests", "backend\tests\Transportadora.UnitTests\Transportadora.UnitTests.csproj", "{072C4427-1549-4C45-B35B-FC26C58517A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14E9016D-1FB1-4FD8-8871-8A134CBADD44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14E9016D-1FB1-4FD8-8871-8A134CBADD44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14E9016D-1FB1-4FD8-8871-8A134CBADD44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14E9016D-1FB1-4FD8-8871-8A134CBADD44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8822C567-5983-4D72-ABC1-514173F30A32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8822C567-5983-4D72-ABC1-514173F30A32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8822C567-5983-4D72-ABC1-514173F30A32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8822C567-5983-4D72-ABC1-514173F30A32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C78C60E-9294-409B-95AA-3D934392B4D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C78C60E-9294-409B-95AA-3D934392B4D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C78C60E-9294-409B-95AA-3D934392B4D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C78C60E-9294-409B-95AA-3D934392B4D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFC2C68D-7DF7-41BF-884A-7F4F1BA746A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFC2C68D-7DF7-41BF-884A-7F4F1BA746A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFC2C68D-7DF7-41BF-884A-7F4F1BA746A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFC2C68D-7DF7-41BF-884A-7F4F1BA746A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EEDE8D4-C65B-4E1E-BC83-4C4758E43653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EEDE8D4-C65B-4E1E-BC83-4C4758E43653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EEDE8D4-C65B-4E1E-BC83-4C4758E43653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EEDE8D4-C65B-4E1E-BC83-4C4758E43653}.Release|Any CPU.Build.0 = Release|Any CPU
+		{072C4427-1549-4C45-B35B-FC26C58517A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{072C4427-1549-4C45-B35B-FC26C58517A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{072C4427-1549-4C45-B35B-FC26C58517A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{072C4427-1549-4C45-B35B-FC26C58517A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F3041206-68BB-43B4-A483-716EE4618428} = {223A22BE-153B-4597-9D01-FE4218F48D96}
+		{14E9016D-1FB1-4FD8-8871-8A134CBADD44} = {F3041206-68BB-43B4-A483-716EE4618428}
+		{8822C567-5983-4D72-ABC1-514173F30A32} = {F3041206-68BB-43B4-A483-716EE4618428}
+		{5C78C60E-9294-409B-95AA-3D934392B4D8} = {F3041206-68BB-43B4-A483-716EE4618428}
+		{FFC2C68D-7DF7-41BF-884A-7F4F1BA746A0} = {F3041206-68BB-43B4-A483-716EE4618428}
+		{8EEDE8D4-C65B-4E1E-BC83-4C4758E43653} = {F3041206-68BB-43B4-A483-716EE4618428}
+		{6A4075F6-C6FF-4A1D-B422-A9EDB37F9285} = {223A22BE-153B-4597-9D01-FE4218F48D96}
+		{072C4427-1549-4C45-B35B-FC26C58517A8} = {6A4075F6-C6FF-4A1D-B422-A9EDB37F9285}
+	EndGlobalSection
+EndGlobal
