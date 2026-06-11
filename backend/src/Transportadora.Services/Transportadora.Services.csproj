@@ -11,5 +11,6 @@
     <ProjectReference Include="../Transportadora.Models/Transportadora.Models.csproj" />
     <ProjectReference Include="../Transportadora.Data/Transportadora.Data.csproj" />
     <ProjectReference Include="../Transportadora.DTOs/Transportadora.DTOs.csproj" />
+    <ProjectReference Include="../Transportadora.Shared/Transportadora.Shared.csproj" />
   </ItemGroup>
 </Project>
