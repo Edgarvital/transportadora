@@ -7,8 +7,8 @@ public class User
     public int Id { get; set; }
     public string Nome { get; set; } = string.Empty;
     public string Documento { get; set; } = string.Empty;
-    public string Email { get; set; } = string.Empty;
-    public string SenhaHash { get; set; } = string.Empty;
+    public string? Email { get; set; }
+    public string? SenhaHash { get; set; }
     public int RoleId { get; set; }
     public int EnderecoId { get; set; }
     public SituacaoUser Situacao { get; set; }
