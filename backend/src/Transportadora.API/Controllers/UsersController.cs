@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Transportadora.DTOs.Users;
 using Transportadora.Services.Users;
@@ -10,6 +11,7 @@ namespace Transportadora.API.Controllers;
 public class UsersController(IUserService userService) : ControllerBase
 {
     [HttpPost("register")]
+    [AllowAnonymous]
     public async Task<ActionResult<UserRegistrationResponseDTO>> Register([FromBody] UserRegistrationRequestDTO request, CancellationToken cancellationToken)
     {
         var result = await userService.RegisterAsync(request, cancellationToken);

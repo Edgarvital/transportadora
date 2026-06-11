@@ -12,8 +12,8 @@ using Transportadora.Data.Context;
 namespace Transportadora.Data.Migrations
 {
     [DbContext(typeof(TransportadoraDbContext))]
-    [Migration("20260611164503_SeedInitialUsers")]
-    partial class SeedInitialUsers
+    [Migration("20260611185833_SeedUser")]
+    partial class SeedUser
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

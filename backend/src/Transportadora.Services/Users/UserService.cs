@@ -52,7 +52,7 @@ public sealed class UserService(TransportadoraDbContext dbContext, IAuthService 
             Nome = request.Nome,
             Documento = request.Documento,
             Email = usuarioAtivo ? request.Email : null,
-            SenhaHash = usuarioAtivo ? authService.HashPassword(request.Senha!) : null,
+            SenhaHash = usuarioAtivo ? authService.HashPassword(request.Senha!.Trim()) : null,
             RoleId = roleCliente.Id,
             Endereco = endereco,
             Situacao = usuarioAtivo ? SituacaoUser.Ativo : SituacaoUser.Inativo
