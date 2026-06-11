@@ -17,6 +17,7 @@ services:
   api:
     build:
       context: ./backend/src 
+
       dockerfile: Dockerfile
     container_name: transportadora_api
     restart: on-failure
