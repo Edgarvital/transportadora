@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Transportadora.Data.Context;
@@ -11,9 +12,11 @@ using Transportadora.Data.Context;
 namespace Transportadora.Data.Migrations
 {
     [DbContext(typeof(TransportadoraDbContext))]
-    partial class TransportadoraDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260611154008_AddOptionalLoginFieldsForUser")]
+    partial class AddOptionalLoginFieldsForUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -121,38 +124,6 @@ namespace Transportadora.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Endereco", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Bairro = "Centro",
-                            Cep = "00000001",
-                            Cidade = "São Paulo",
-                            Logradouro = "Rua Admin",
-                            Numero = "1",
-                            Uf = "SP"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Bairro = "Centro",
-                            Cep = "00000002",
-                            Cidade = "São Paulo",
-                            Logradouro = "Rua Atendente",
-                            Numero = "2",
-                            Uf = "SP"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Bairro = "Centro",
-                            Cep = "00000003",
-                            Cidade = "São Paulo",
-                            Logradouro = "Rua Cliente",
-                            Numero = "3",
-                            Uf = "SP"
-                        });
                 });
 
             modelBuilder.Entity("Transportadora.Models.Entities.Motorista", b =>
@@ -384,41 +355,6 @@ namespace Transportadora.Data.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("User", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Documento = "00000000000",
-                            Email = "admin@admin.com",
-                            EnderecoId = 1,
-                            Nome = "Administrador Master",
-                            RoleId = 3,
-                            SenhaHash = "9B968201AC99BBE67CEC3DF02251FAA383BE2B040732D00B0EF07C1600D97963",
-                            Situacao = "Ativo"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Documento = "11111111111",
-                            Email = "atendente@atendente.com",
-                            EnderecoId = 2,
-                            Nome = "Atendente Padrão",
-                            RoleId = 2,
-                            SenhaHash = "9B968201AC99BBE67CEC3DF02251FAA383BE2B040732D00B0EF07C1600D97963",
-                            Situacao = "Ativo"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Documento = "22222222222",
-                            Email = "cliente@cliente.com",
-                            EnderecoId = 3,
-                            Nome = "Cliente Fictício",
-                            RoleId = 1,
-                            SenhaHash = "9B968201AC99BBE67CEC3DF02251FAA383BE2B040732D00B0EF07C1600D97963",
-                            Situacao = "Ativo"
-                        });
                 });
 
             modelBuilder.Entity("Transportadora.Models.Entities.Veiculo", b =>

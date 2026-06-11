@@ -5,6 +5,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.1.0" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="../Transportadora.Models/Transportadora.Models.csproj" />
     <ProjectReference Include="../Transportadora.Data/Transportadora.Data.csproj" />
     <ProjectReference Include="../Transportadora.DTOs/Transportadora.DTOs.csproj" />
