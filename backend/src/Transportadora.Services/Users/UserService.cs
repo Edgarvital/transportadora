@@ -61,14 +61,45 @@ public sealed class UserService(TransportadoraDbContext dbContext, IAuthService 
         dbContext.Users.Add(usuario);
         await dbContext.SaveChangesAsync(cancellationToken);
 
-        return Result<UserRegistrationResponseDTO>.Ok(new UserRegistrationResponseDTO
+        return Result<UserRegistrationResponseDTO>.Ok(MapToDto(usuario, roleCliente.Nome.ToString()));
+    }
+
+    public async Task<Result<UserRegistrationResponseDTO?>> GetByDocumentAsync(string documento, CancellationToken cancellationToken)
+    {
+        var usuario = await dbContext.Users
+            .Include(x => x.Role)
+            .AsNoTracking()
+            .FirstOrDefaultAsync(x => x.Documento == documento, cancellationToken);
+
+        if (usuario is null)
+        {
+            return Result<UserRegistrationResponseDTO?>.Fail(ResourceErrorCodes.NotFound, "Usuário não encontrado.");
+        }
+
+        return Result<UserRegistrationResponseDTO?>.Ok(MapToDto(usuario, usuario.Role!.Nome.ToString()));
+    }
+
+    public async Task<IReadOnlyList<UserRegistrationResponseDTO>> GetAllAsync(CancellationToken cancellationToken)
+    {
+        var usuarios = await dbContext.Users
+            .Include(x => x.Role)
+            .AsNoTracking()
+            .OrderBy(x => x.Nome)
+            .ToListAsync(cancellationToken);
+
+        return usuarios.Select(u => MapToDto(u, u.Role!.Nome.ToString())).ToList();
+    }
+
+    private static UserRegistrationResponseDTO MapToDto(User usuario, string roleNome)
+    {
+        return new UserRegistrationResponseDTO
         {
             Id = usuario.Id,
             Nome = usuario.Nome,
             Email = usuario.Email,
-            Role = roleCliente.Nome.ToString(),
+            Role = roleNome,
             Situacao = usuario.Situacao.ToString(),
-            PossuiLogin = usuarioAtivo
-        });
+            PossuiLogin = !string.IsNullOrWhiteSpace(usuario.SenhaHash)
+        };
     }
 }

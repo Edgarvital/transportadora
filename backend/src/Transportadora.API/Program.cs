@@ -6,6 +6,7 @@ using Microsoft.OpenApi.Models;
 using Transportadora.Data.Context;
 using Transportadora.Services.Authentication;
 using Transportadora.Services.Motoristas;
+using Transportadora.Services.Solicitacoes;
 using Transportadora.Services.Users;
 using Transportadora.Services.Veiculos;
 
@@ -23,6 +24,7 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IMotoristaService, MotoristaService>();
 builder.Services.AddScoped<IVeiculoService, VeiculoService>();
+builder.Services.AddScoped<ISolicitacaoColetaService, SolicitacaoColetaService>();
 
 var jwtSection = builder.Configuration.GetSection("Jwt");
 var jwtKey = jwtSection["Key"] ?? throw new InvalidOperationException("Jwt:Key was not configured.");
