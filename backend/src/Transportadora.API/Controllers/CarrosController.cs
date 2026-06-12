@@ -11,6 +11,7 @@ namespace Transportadora.API.Controllers;
 public class CarrosController(IVeiculoService veiculoService) : ControllerBase
 {
     [HttpGet]
+    [Authorize]
     public async Task<ActionResult<IReadOnlyList<VeiculoResponseDTO>>> GetAll(CancellationToken cancellationToken)
     {
         var response = await veiculoService.GetAllAsync(cancellationToken);
@@ -18,6 +19,7 @@ public class CarrosController(IVeiculoService veiculoService) : ControllerBase
     }
 
     [HttpGet("{id:int}")]
+    [Authorize]
     public async Task<ActionResult<VeiculoResponseDTO>> GetById(int id, CancellationToken cancellationToken)
     {
         var response = await veiculoService.GetByIdAsync(id, cancellationToken);

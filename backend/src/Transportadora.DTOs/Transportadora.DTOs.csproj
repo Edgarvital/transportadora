@@ -4,4 +4,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Transportadora.Models\Transportadora.Models.csproj" />
+  </ItemGroup>
 </Project>
