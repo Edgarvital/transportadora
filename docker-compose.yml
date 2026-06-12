@@ -17,12 +17,12 @@ services:
   api:
     build:
       context: ./backend/src 
-
       dockerfile: Dockerfile
     container_name: transportadora_api
     restart: on-failure
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
       - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=TransportadoraDB;Username=admin;Password=adminpassword
       - Cors__AllowedOrigin=http://localhost:3000 
     ports:
@@ -30,16 +30,18 @@ services:
     depends_on:
       - db
 
-#  frontend:
-#    build:
-#      context: ./frontend 
-#      dockerfile: Dockerfile
-#    container_name: transportadora_frontend
-#    restart: on-failure
-#    ports:
-#      - "3000:80" 
-#    depends_on:
-#      - api
+  frontend:
+    build:
+      context: ./frontend 
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_URL=http://localhost:8080/api
+    container_name: transportadora_frontend
+    restart: on-failure
+    ports:
+      - "3000:80" 
+    depends_on:
+      - api
 
 volumes:
   postgres_data:
