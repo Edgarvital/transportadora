@@ -248,12 +248,11 @@ O backend foi preparado para subir com PostgreSQL e API via Docker Compose, usan
 Comandos a partir da pasta `backend/`:
 
 ```bash
-docker compose up --build
+docker-compose up --build -d
 ```
 
 Após subir, a API fica disponível em `http://localhost:8080` e o PostgreSQL expõe a porta `5433` no host.
 
 Endpoints úteis:
 
-- `GET /health`
 - `GET /swagger`
