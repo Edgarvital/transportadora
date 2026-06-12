@@ -43,19 +43,33 @@ O MVP tem como foco centralizar solicitações de coleta criadas por clientes e 
 
 - Modelar as entidades principais.
 - Criação das migrations e dos seeders
+- Configurar EF Core e Fluent API.
 
 ### Fase 3 - API e Segurança
 
-- Configurar EF Core e Fluent API.
 - Implementar autenticação via JWT
 - Expor os primeiros endpoints da API.
 
 ### Fase 4 - Primeiro Fluxo Completo
 
+## Fase 4a - Gestão de Recursos
+
+- CRUD Motorista.
+- CRUD carro.
+
+## Fase 4b - Fluxo de Solicitação
+
 - Criar solicitação.
 - Roteirizar coleta.
 - Registrar ocorrência.
 - Validar transições de status.
+
+## Fase 5 - Implementação do frontend
+
+- Implementar Login e armazenamento do token.
+- Implementar fluxo de solicitação.
+- Implementar gerenciamento da solicitação.
+- Implementar autorização de recurso com base na role.
 
 ## Estrutura Base
 
